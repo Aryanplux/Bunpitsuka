@@ -1,0 +1,23 @@
+# Custom Exclusions
+HelloWorld-ext/
+email-good-react/
+*.zip
+
+# Java / Maven
+target/
+.mvn/
+*.class
+*.log
+*.jar
+*.war
+
+# IDE files
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+
+# OS files
+.DS_Store
+Thumbs.db
