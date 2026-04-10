@@ -1,6 +1,5 @@
 # Custom Exclusions
 HelloWorld-ext/
-email-good-react/
 *.zip
 
 # Java / Maven
