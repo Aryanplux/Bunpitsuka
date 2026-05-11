@@ -25,7 +25,7 @@
 
 <br />
 
-🎬 **[Watch Full Demo on YouTube →](https://youtu.be/AvBLqZtoR8M?si=y354Z0g925VPOS_v)**
+ **[Watch Full Demo on YouTube →](https://youtu.be/AvBLqZtoR8M?si=y354Z0g925VPOS_v)**
 
 <br />
 
@@ -39,7 +39,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 1. [Introduction](#-introduction)
 2. [Why Local LLM? The Privacy Case](#-why-local-llm-the-privacy-case)
@@ -61,7 +61,7 @@
 
 ---
 
-## 🔭 Introduction
+##  Introduction
 
 **Bunpitsuka** *(文筆家 — Japanese: "a person of literary skill")* is a highly sophisticated, AI-powered email authoring assistant built from the ground up for **developers, professionals, and enterprise environments** that refuse to compromise on data privacy.
 
@@ -73,7 +73,7 @@ By deeply integrating **locally hosted Large Language Models** via Ollama with a
 
 ---
 
-## 🔐 Why Local LLM? The Privacy Case
+##  Why Local LLM? The Privacy Case
 
 ```
 TRADITIONAL AI EMAIL TOOLS (e.g., Grammarly, Copilot, ChatGPT plugins)
@@ -120,7 +120,7 @@ BUNPITSUKA — LOCAL LLM ARCHITECTURE
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ### High-Level Architectural Overview
 
@@ -302,7 +302,7 @@ Model Selection Rationale:
 ┌────────────────┬──────────────┬────────────────┬──────────────────┐
 │ Model          │ Size         │ RAM Required   │ Speed            │
 ├────────────────┼──────────────┼────────────────┼──────────────────┤
-│ llama3.2:1b    │ ~1.3 GB      │ ~2 GB VRAM     │ 40–65 tok/s ✅   │
+│ llama3.2:1b    │ ~1.3 GB      │ ~2 GB VRAM     │ 40–65 tok/s      │
 │ llama3.2:3b    │ ~2.0 GB      │ ~4 GB VRAM     │ 25–40 tok/s      │
 │ llama3.1:8b    │ ~4.7 GB      │ ~8 GB VRAM     │ 10–20 tok/s      │
 │ mistral:7b     │ ~4.1 GB      │ ~8 GB VRAM     │ 15–25 tok/s      │
@@ -313,7 +313,7 @@ Model Selection Rationale:
 
 ---
 
-## 🔄 End-to-End Request Lifecycle
+##  End-to-End Request Lifecycle
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -399,7 +399,7 @@ Data leaving machine: 0 bytes
 
 ---
 
-## ✨ Key Features Deep Dive
+##  Key Features Deep Dive
 
 ### 1. Deep Gmail DOM Integration
 
@@ -410,7 +410,7 @@ Gmail Compose Toolbar (native):
 [ Bold ] [ Italic ] [ Link ] [ Attach ] ... [ Send ]
 
 Gmail Compose Toolbar (with Bunpitsuka):
-[ Bold ] [ Italic ] [ Link ] [ Attach ] ... [ 🤖 AI Reply ] [ Send ]
+[ Bold ] [ Italic ] [ Link ] [ Attach ] ... [ AI Reply ] [ Send ]
 ```
 
 ### 2. Context-Aware Thread Parsing
@@ -463,7 +463,7 @@ External IPs           ANY     ANY         ← ZERO outbound connections
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### Frontend — Chrome Extension
 
@@ -503,7 +503,7 @@ External IPs           ANY     ANY         ← ZERO outbound connections
 
 ---
 
-## 📊 Performance Benchmarks
+##  Performance Benchmarks
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -545,7 +545,7 @@ External data transmission          0 bytes          By architectural design
 
 ---
 
-## 🌐 REST API Reference
+##  REST API Reference
 
 All backend endpoints are served from `http://localhost:8081`.
 
@@ -619,7 +619,7 @@ Body (raw JSON):
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 
@@ -632,7 +632,7 @@ Body (raw JSON):
 | Ollama | Latest | `ollama --version` |
 | Postman | Optional | — |
 
-> ⚠️ **Hardware note:** Llama 3.2:1b requires approximately **2 GB of RAM** for model execution. 8 GB system RAM minimum recommended. Apple M-series chips offer significantly better performance due to unified memory architecture.
+>  **Hardware note:** Llama 3.2:1b requires approximately **2 GB of RAM** for model execution. 8 GB system RAM minimum recommended. Apple M-series chips offer significantly better performance due to unified memory architecture.
 
 ---
 
@@ -735,7 +735,7 @@ All traffic is loopback only. No external network connections.
 
 ---
 
-## 📖 Usage Guide
+##  Usage Guide
 
 ### Via Chrome Extension (Gmail)
 
@@ -784,39 +784,39 @@ All traffic is loopback only. No external network connections.
 
 ---
 
-## 🗺️ Future Roadmap
+##  Future Roadmap
 
 ```
 Version 1.x (Current)
 ─────────────────────────────────────────────────────────────────────────
-  ✅ Gmail DOM injection via Chrome Extension (Manifest V3)
-  ✅ React web portal for standalone usage
-  ✅ Spring WebFlux reactive backend
-  ✅ Local Ollama LLM integration (Llama 3.2:1b)
-  ✅ Four psychological tone profiles
-  ✅ Token streaming (Server-Sent Events)
-  ✅ Zero external API calls — full privacy
+   Gmail DOM injection via Chrome Extension (Manifest V3)
+   React web portal for standalone usage
+   Spring WebFlux reactive backend
+   Local Ollama LLM integration (Llama 3.2:1b)
+   Four psychological tone profiles
+   Token streaming (Server-Sent Events)
+   Zero external API calls — full privacy
 
 Version 2.x (Planned)
 ─────────────────────────────────────────────────────────────────────────
-  🔲 OAuth 2.0 — User authentication and identity management in React
-  🔲 RAG (Retrieval-Augmented Generation) — Index user's sent emails
+   OAuth 2.0 — User authentication and identity management in React
+   RAG (Retrieval-Augmented Generation) — Index user's sent emails
        in a local vector database (e.g., ChromaDB / Qdrant) to learn
        individual writing style and produce hyper-personalized drafts
-  🔲 Mozilla Firefox Extension — Port Manifest V3 codebase to Firefox
-  🔲 Microsoft Edge Extension — Edge Add-ons store publication
+   Mozilla Firefox Extension — Port Manifest V3 codebase to Firefox
+   Microsoft Edge Extension — Edge Add-ons store publication
 
 Version 3.x (Vision)
 ─────────────────────────────────────────────────────────────────────────
-  🔲 Outlook Web DOM integration
-  🔲 Multi-model support — switch between Llama, Mistral, Gemma per task
-  🔲 On-device fine-tuning — further personalize model on user's corpus
-  🔲 Enterprise deployment — Docker Compose stack for team-wide rollout
+   Outlook Web DOM integration
+   Multi-model support — switch between Llama, Mistral, Gemma per task
+   On-device fine-tuning — further personalize model on user's corpus
+   Enterprise deployment — Docker Compose stack for team-wide rollout
 ```
 
 ---
 
-## 👤 Creator
+##  Creator
 
 <br />
 
@@ -838,7 +838,7 @@ Version 3.x (Vision)
   ╚═════════════════════════════════════════════════════════════════╝
 ```
 
-🎬 **[Watch the Full Project Demo →](https://youtu.be/AvBLqZtoR8M?si=y354Z0g925VPOS_v)**
+ **[Watch the Full Project Demo →](https://youtu.be/AvBLqZtoR8M?si=y354Z0g925VPOS_v)**
 
 ---
 
